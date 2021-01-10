@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jokenpo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+	<link rel="shortcut icon" href="img/pedra.ico" type="image/x-icon">
+	<link href="./Assets/style.css" rel="stylesheet">
+	<script src="./Assets/script.js"></script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container">
+			<a class="navbar-brand">
+				<label class="Title">Jokenpo</label>
+			</a>
+		</div>
+	</nav>
+
+	<!-- Game Section -->
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Pedra, Papel e Tesoura</h1>
+			</div>
+			<div class="col-12">
+				<h2 id="resultado">Faça a sua jogada</h2>
+			</div>
+			<div class="col-12" style="padding-bottom: 0px">
+				<h3>Pontuação:</h3>
+			</div>
+			<div class="col-12 row">
+				<div class="col-6">
+					<label>Jogador</label>
+					<input type="text" class="form-control" value="0" disabled="disabled" id="pontos_jogador" style="text-align: center" />
+				</div>
+				<div class="col-6">
+					<label>Computador</label>
+					<input type="text" class="form-control" value="0" disabled="disabled" id="pontos_ia" style="text-align: center" />
+				</div>
+			</div>
+			<div class="col-12">
+				<button id="btn_reiniciar" type="button" class="btn btn-primary" onclick="reiniciar()">Reiniciar Pontuação</button>
+			</div>
+			<hr>
+			<div class="col-12" id="div_jogada">
+				<div class="col-12 row">
+					<div class="col-4">
+						<img src="img/pedra.png" id="pedra" onclick="jogarPedra()" class="img-fluid img-clickable" />
+					</div>
+					<div class="col-4">
+						<img src="img/papel.png" id="papel" onclick="jogarPapel()" class="img-fluid img-clickable" />
+					</div>
+					<div class="col-4">
+						<img src="img/tesoura.png" id="tesoura" onclick="jogarTesoura()" class="img-fluid img-clickable" />
+					</div>
+				</div>
+			</div>
+			<div class="col-12" id="img_loading" style="display: none">
+				<img id="img_gon" src="" class="img-fluid">
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-12">
+					<hr class="light">
+					<h5>Contato</h5>
+					<hr class="light">
+					<p>(16) 98852-4868</p>
+					<p>luiz.fifolato@lfsystem.com.br</p>
+				</div>		
+				<div class="col-md-12 col-sm-12 center-col text-center"> 
+					<a href="https://github.com/lfifolato" class="btn social-icon button" data-abc="true"><i class="fab fa-github"></i></a> 					
+					<a href="https://www.linkedin.com/in/luiz-henrique-dalri-fifolato-1170861a5/" class="btn social-icon button" data-abc="true"><i class="fab fa-linkedin"></i></a>							
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
